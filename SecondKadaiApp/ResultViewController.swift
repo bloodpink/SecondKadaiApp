@@ -8,8 +8,16 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    //    「こんにちは　名前さん」　をIBOutletとして接続する
+    @IBOutlet weak var namelabel: UILabel!
+    //受け取るためのプロパティの宣言
+    var nameString : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        namelabel.text = "こんにちは\(nameString)さん"
 
         // Do any additional setup after loading the view.
     }
